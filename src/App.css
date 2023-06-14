@@ -1,3 +1,9 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .background {
   background-color: #666;
   height: 100dvh;
@@ -15,6 +21,7 @@
 
 .predvedetBtn:hover {
   background-color: rgb(77, 195, 241);
+  cursor: pointer;
   outline: none;
 }
 
@@ -24,6 +31,7 @@
   padding-left: 15px;
   font-size: 20px;
   border-radius: 20px;
+  border: 1px solid black;
 }
 
 .number:focus{
@@ -93,6 +101,6 @@ h1 {
   color: #333;
   height: 30px;
   position: absolute;
-  inset: 226px auto auto 59px;
+  inset: 230px auto auto 59px;
   font-size: 18px;
 }

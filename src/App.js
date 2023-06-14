@@ -11,9 +11,15 @@ function App() {
       <p className="popisVaha">Váha</p>
       <button className="predvedetBtn">Předpovědět</button>
       <VscInfo className="info" /><p className="infoText">U známky napiš pouze číslo 1-5 a u váhy čísla 1-10</p>
+      <div className='znamky'></div>
   </main>
   );
 }
+
+const znamka = document.querySelector('#znamka');
+const vaha = document.querySelector('#vaha');
+const btn = document.querySelector('.predvedetBtn');
+const znamky = document.querySelector('.znamky');
 
 const ReassuringZnamka = () => {
   return (e) => {
@@ -38,5 +44,18 @@ const ReassuringVaha = () => {
     }
   }
 }
+
+const Zapsat = () => {
+  const vahaVal = vaha.value;
+  const znamkaVal = znamka.value;
+  const prumer = (vahaVal * znamkaVal) / vahaVal;
+  const div = document.createElement('div');
+  div.innerHTML = prumer;
+  znamky.innerHTML += div; 
+  vaha.value = '';
+  znamka.value = '';
+}
+
+btn.addEventListener("click", Zapsat);
 
 export default App;
